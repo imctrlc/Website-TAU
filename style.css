@@ -1,0 +1,366 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-blue: #1e40af; /* Warna biru gelap TAU */
+    --accent-blue: #2563eb; /* Warna tombol biru terang */
+    --bg-light: #f3f4f6;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+/* --- LOGIN PAGE --- */
+.login-container {
+    background: url('assets/homebg.jpg') no-repeat center center/cover; /* Ganti dengan gambar background gedung */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.login-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    margin: 0 1rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-blue);
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--primary-blue); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); 
+    
+    
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;   
+}
+
+
+.logo {
+    font-weight: 70;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+
+/* --- HERO SECTION --- */
+.hero {
+    position: relative;
+    height: 400px;
+    background: url('assets/homebg.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-hero {
+    padding: 10px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-blue { background: var(--accent-blue); color: white; }
+.btn-outline { border: 2px solid white; color: white; }
+
+/* --- SECTIONS --- */
+.section-title {
+    text-align: center;
+    color: var(--accent-blue);
+    font-size: 2rem;
+    margin: 3rem 0 2rem;
+    font-weight: 700;
+}
+
+/* POPULAR FACILITIES */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 0 5%;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.btn-small {
+    background: var(--accent-blue);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* --- FASILITAS PENUNJANG (New Section) --- */
+.penunjang-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 5%;
+    flex-wrap: wrap;
+}
+
+.penunjang-item {
+    text-align: center;
+    width: 150px;
+}
+
+.penunjang-icon {
+    font-size: 3rem;
+    color: var(--accent-blue); /* Warna biru icon */
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Khusus untuk meniru ikon di gambar: */
+.icon-code { font-family: monospace; font-weight: bold; }
+
+.penunjang-item h4 {
+    font-weight: 700;
+    color: #333;
+}
+
+/* --- FOOTER --- */
+.footer-contact {
+    background: #f9f9f9;
+    padding: 3rem 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.contact-info, .map-container {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+}
+
+/* --- DAFTAR FASILITAS PAGE --- */
+.room-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 1.5rem;
+    padding: 2rem 5%;
+}
+
+.room-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden; 
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+    padding: 0; 
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.room-img {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+
+.room-card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0 10px;
+}
+
+.room-card p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+.status {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0 auto 15px; /* Tambahkan margin bawah agar status tidak menempel di bawah */
+    display: inline-block;
+}
+.status.available { background: #d1fae5; color: #065f46; }
+.status.session { background: #fee2e2; color: #991b1b; }
+
+/* --- DETAIL RUANG PAGE --- */
+.detail-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.detail-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.detail-text h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.detail-text p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #4b5563;
+}
+
+/* --- GALERI PAGE --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem 5%;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gallery-item img:hover {
+    opacity: 0.8;
+}
